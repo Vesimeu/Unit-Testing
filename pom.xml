@@ -10,11 +10,12 @@
     <dependencies>
         <dependency>
             <groupId>org.testng</groupId>
-            <artifactId>unit-testing</artifactId>
-            <version>7.7</version>
+            <artifactId>testng</artifactId>
+            <version>7.4.0</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
+
 
     <build>
         <plugins>
