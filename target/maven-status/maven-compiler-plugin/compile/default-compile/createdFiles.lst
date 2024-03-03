@@ -2,5 +2,4 @@ Weapon.class
 Buyer.class
 Buymeweapon.class
 Seller.class
-com\yourdomain\unit_testing\Calculator.class
 InventoryItem.class

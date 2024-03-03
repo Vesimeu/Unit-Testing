@@ -1,51 +1,38 @@
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
+
+
 
 public class SellerTest {
 
-    @Test
-    public void testAddWeaponToArsenal() {
-        // Arrange
-        Seller seller = new Seller(1000);
-        Weapon weapon = new Weapon("Пистолет", 200);
-
-        // Act
-        seller.addWeaponToArsenal(weapon);
-        List<Weapon> arsenal = seller.getArsenal();
-
-        // Assert
-        Assert.assertEquals(arsenal.size(), 1);
-        Assert.assertEquals(arsenal.get(0), weapon);
-    }
-
-    @Test
+    @Test(groups = {"unit"})
     public void testSellItem() {
         // Arrange
         Seller seller = new Seller(1000);
         Weapon weapon = new Weapon("Пистолет", 200);
         seller.addWeaponToArsenal(weapon);
-        double initialMoney = seller.getMoney();
-        double expectedMoney = initialMoney + weapon.getPrice();
 
         // Act
-        seller.sellItem(weapon, weapon.getPrice());
+        seller.sellItem(weapon, 200);
 
         // Assert
-        Assert.assertEquals(seller.getArsenal().size(), 0);
-        Assert.assertEquals(seller.getMoney(), expectedMoney);
+        Assert.assertEquals(seller.getMoney(), 1200.0); // Check if seller received money
+        Assert.assertFalse(seller.getArsenal().contains(weapon)); // Check if weapon was removed from arsenal
     }
 
-    @Test
+    @Test(groups = {"unit"})
     public void testDisplayInventory() {
-        // Arrange
         Seller seller = new Seller(1000);
-        Weapon weapon = new Weapon("Пистолет", 200);
-        seller.addWeaponToArsenal(weapon);
+        Weapon pistol = new Weapon("Пистолет", 200);
+        Weapon rifle = new Weapon("Винтовка", 500);
+        seller.addWeaponToArsenal(pistol);
+        seller.addWeaponToArsenal(rifle);
 
-        // Act
-        seller.displayInventory();
-        // Since this method only prints output, we cannot assert its behavior programmatically.
+        List<Weapon> inventory = seller.displayInventory();
+        Assert.assertTrue(inventory.contains(pistol));
+        Assert.assertTrue(inventory.contains(rifle));
+        Assert.assertEquals(seller.getMoney(), 1000); //Продавец не отдаёт деньги за оружие =0
     }
 }

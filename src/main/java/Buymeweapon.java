@@ -10,16 +10,16 @@ public class Buymeweapon {
         seller.addWeaponToArsenal(rifle);
 
         System.out.println("Информация о продавце:");
-        seller.displayInventory();
+        System.out.println(seller.displayInventory());
         System.out.println("Информация о покупателе:");
-        buyer.displayInventory();
+        System.out.println(buyer.displayInventory());
 
         buyer.buyItem(pistol, pistol.getPrice());
         seller.sellItem(pistol, pistol.getPrice());
 
         System.out.println("Информация о продавце после продажи:");
-        seller.displayInventory();
+        System.out.println(seller.displayInventory());
         System.out.println("Информация о покупателе после покупки:");
-        buyer.displayInventory();
+        System.out.println(buyer.displayInventory());
     }
 }

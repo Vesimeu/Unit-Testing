@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Collections;
 
 public class Buyer implements InventoryItem {
     private double money;
@@ -28,16 +29,16 @@ public class Buyer implements InventoryItem {
     }
 
     @Override
-    public void displayInventory() {
+    public List<Weapon> displayInventory() {
         if (inventory.isEmpty()) {
-            System.out.println("Инвентарь пуст");
-        } 
-        else{
+            System.out.println("Инвентарь покупателя пуст");
+            return Collections.emptyList(); // Возвращаем пустой список
+        }
         System.out.println("Инвентарь покупателя:");
         for (Weapon weapon : inventory) {
             System.out.println(weapon.getWeaponName() + " - Цена: " + weapon.getPrice());
         }
-    }
+        return inventory;
     }
 
     public double getMoney() {
