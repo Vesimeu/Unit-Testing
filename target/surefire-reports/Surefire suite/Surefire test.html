@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Surefire test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>5/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>9/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Mar 03 15:26:58 YEKT 2024</td>
+<td>Started on:</td><td>Sun Mar 03 16:12:11 YEKT 2024</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (34 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (40 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,69 +76,50 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='CalculatorTest.testAdd()'><b>testAdd</b><br>Test class: CalculatorTest</td>
+<td title='SellerTest.testAddWeaponToArsenal()'><b>testAddWeaponToArsenal</b><br>Test class: SellerTest</td>
 <td></td>
 <td>0</td>
-<td>CalculatorTest@2893de87</td></tr>
+<td>SellerTest@1d548a08</td></tr>
 <tr>
-<td title='CalculatorTest.testDivide()'><b>testDivide</b><br>Test class: CalculatorTest</td>
+<td title='SellerTest.testSellItem()'><b>testSellItem</b><br>Test class: SellerTest</td>
 <td></td>
 <td>0</td>
-<td>CalculatorTest@2893de87</td></tr>
+<td>SellerTest@1d548a08</td></tr>
 <tr>
-<td title='CalculatorTest.testSubtract()'><b>testSubtract</b><br>Test class: CalculatorTest</td>
+<td title='WeaponInventoryTest.testBuyerBuyItem()'><b>testBuyerBuyItem</b><br>Test class: WeaponInventoryTest</td>
 <td></td>
 <td>0</td>
-<td>CalculatorTest@2893de87</td></tr>
+<td>WeaponInventoryTest@16aa0a0a</td></tr>
 <tr>
-<td title='CalculatorTest.testDivideByZero()'><b>testDivideByZero</b><br>Test class: CalculatorTest</td>
-<td><div><pre>java.lang.IllegalArgumentException: Divider cannot be 0
-	at com.yourdomain.unit_testing.Calculator.divide(Calculator.java:19)
-	at CalculatorTest.testDivideByZero(CalculatorTest.java:66)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1354003114", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1354003114'><pre>java.lang.IllegalArgumentException: Divider cannot be 0
-	at com.yourdomain.unit_testing.Calculator.divide(Calculator.java:19)
-	at CalculatorTest.testDivideByZero(CalculatorTest.java:66)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-</pre></div></td>
-<td>0</td>
-<td>CalculatorTest@2893de87</td></tr>
-<tr>
-<td title='CalculatorTest.testMultiply()'><b>testMultiply</b><br>Test class: CalculatorTest</td>
+<td title='WeaponInventoryTest.testSellerSellItem()'><b>testSellerSellItem</b><br>Test class: WeaponInventoryTest</td>
 <td></td>
 <td>0</td>
-<td>CalculatorTest@2893de87</td></tr>
+<td>WeaponInventoryTest@16aa0a0a</td></tr>
+<tr>
+<td title='WeaponInventoryTest.testBuyerCannotSellItem()'><b>testBuyerCannotSellItem</b><br>Test class: WeaponInventoryTest</td>
+<td></td>
+<td>0</td>
+<td>WeaponInventoryTest@16aa0a0a</td></tr>
+<tr>
+<td title='BuyerTest.testBuyItem()'><b>testBuyItem</b><br>Test class: BuyerTest</td>
+<td></td>
+<td>0</td>
+<td>BuyerTest@25a65b77</td></tr>
+<tr>
+<td title='SellerTest.testDisplayInventory()'><b>testDisplayInventory</b><br>Test class: SellerTest</td>
+<td></td>
+<td>0</td>
+<td>SellerTest@1d548a08</td></tr>
+<tr>
+<td title='WeaponInventoryTest.testSellerCannotBuyItem()'><b>testSellerCannotBuyItem</b><br>Test class: WeaponInventoryTest</td>
+<td></td>
+<td>0</td>
+<td>WeaponInventoryTest@16aa0a0a</td></tr>
+<tr>
+<td title='BuyerTest.testDisplayInventory()'><b>testDisplayInventory</b><br>Test class: BuyerTest</td>
+<td></td>
+<td>0</td>
+<td>BuyerTest@25a65b77</td></tr>
 </table><p>
 </body>
 </html>
