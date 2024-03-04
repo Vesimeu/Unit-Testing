@@ -1,21 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-03T16:57:54 YEKT" name="Surefire suite" finished-at="2024-03-03T16:57:54 YEKT" duration-ms="31">
+  <suite started-at="2024-03-04T11:25:00 YEKT" name="Surefire suite" finished-at="2024-03-04T11:25:00 YEKT" duration-ms="44">
     <groups>
       <group name="unit">
-        <method signature="SellerTest.testDisplayInventory()[pri:0, instance:SellerTest@5d740a0f]" name="testDisplayInventory" class="SellerTest"/>
-        <method signature="SellerTest.testSellItem()[pri:0, instance:SellerTest@5d740a0f]" name="testSellItem" class="SellerTest"/>
+        <method signature="BuyerTest.testBuyItem()[pri:0, instance:BuyerTest@2ed0fbae]" name="testBuyItem" class="BuyerTest"/>
+        <method signature="BuyerTest.testBuyItemWithEnoughMoney()[pri:0, instance:BuyerTest@2ed0fbae]" name="testBuyItemWithEnoughMoney" class="BuyerTest"/>
+        <method signature="BuyerTest.testBuyItemWithoutEnoughMoney()[pri:0, instance:BuyerTest@2ed0fbae]" name="testBuyItemWithoutEnoughMoney" class="BuyerTest"/>
+        <method signature="BuyerTest.testDisplayInventory()[pri:0, instance:BuyerTest@2ed0fbae]" name="testDisplayInventory" class="BuyerTest"/>
+        <method signature="SellerTest.testDisplayInventory()[pri:0, instance:SellerTest@16aa0a0a]" name="testDisplayInventory" class="SellerTest"/>
+        <method signature="SellerTest.testSellItem()[pri:0, instance:SellerTest@16aa0a0a]" name="testSellItem" class="SellerTest"/>
       </group> <!-- unit -->
     </groups>
-    <test started-at="2024-03-03T16:57:54 YEKT" name="Surefire test" finished-at="2024-03-03T16:57:54 YEKT" duration-ms="31">
-      <class name="SellerTest">
-        <test-method signature="testDisplayInventory()[pri:0, instance:SellerTest@5d740a0f]" started-at="2024-03-03T16:57:54 YEKT" name="testDisplayInventory" finished-at="2024-03-03T16:57:54 YEKT" duration-ms="6" status="PASS">
+    <test started-at="2024-03-04T11:25:00 YEKT" name="Surefire test" finished-at="2024-03-04T11:25:00 YEKT" duration-ms="44">
+      <class name="BuyerTest">
+        <test-method signature="testBuyItem()[pri:0, instance:BuyerTest@2ed0fbae]" started-at="2024-03-04T11:25:00 YEKT" name="testBuyItem" finished-at="2024-03-04T11:25:00 YEKT" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBuyItem -->
+        <test-method signature="testBuyItemWithEnoughMoney()[pri:0, instance:BuyerTest@2ed0fbae]" started-at="2024-03-04T11:25:00 YEKT" name="testBuyItemWithEnoughMoney" finished-at="2024-03-04T11:25:00 YEKT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBuyItemWithEnoughMoney -->
+        <test-method signature="testBuyItemWithoutEnoughMoney()[pri:0, instance:BuyerTest@2ed0fbae]" started-at="2024-03-04T11:25:00 YEKT" name="testBuyItemWithoutEnoughMoney" finished-at="2024-03-04T11:25:00 YEKT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBuyItemWithoutEnoughMoney -->
+        <test-method signature="testDisplayInventory()[pri:0, instance:BuyerTest@2ed0fbae]" started-at="2024-03-04T11:25:00 YEKT" name="testDisplayInventory" finished-at="2024-03-04T11:25:00 YEKT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDisplayInventory -->
-        <test-method signature="testSellItem()[pri:0, instance:SellerTest@5d740a0f]" started-at="2024-03-03T16:57:54 YEKT" name="testSellItem" finished-at="2024-03-03T16:57:54 YEKT" duration-ms="1" status="PASS">
+      </class> <!-- BuyerTest -->
+      <class name="WeaponInventoryTest">
+        <test-method signature="testBuyerBuyItem()[pri:0, instance:WeaponInventoryTest@780cb77]" started-at="2024-03-04T11:25:00 YEKT" name="testBuyerBuyItem" finished-at="2024-03-04T11:25:00 YEKT" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBuyerBuyItem -->
+        <test-method signature="testBuyerCannotSellItem()[pri:0, instance:WeaponInventoryTest@780cb77]" started-at="2024-03-04T11:25:00 YEKT" name="testBuyerCannotSellItem" finished-at="2024-03-04T11:25:00 YEKT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBuyerCannotSellItem -->
+        <test-method signature="testSellerCannotBuyItem()[pri:0, instance:WeaponInventoryTest@780cb77]" started-at="2024-03-04T11:25:00 YEKT" name="testSellerCannotBuyItem" finished-at="2024-03-04T11:25:00 YEKT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSellerCannotBuyItem -->
+        <test-method signature="testSellerSellItem()[pri:0, instance:WeaponInventoryTest@780cb77]" started-at="2024-03-04T11:25:00 YEKT" name="testSellerSellItem" finished-at="2024-03-04T11:25:00 YEKT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSellerSellItem -->
+      </class> <!-- WeaponInventoryTest -->
+      <class name="SellerTest">
+        <test-method signature="testDisplayInventory()[pri:0, instance:SellerTest@16aa0a0a]" started-at="2024-03-04T11:25:00 YEKT" name="testDisplayInventory" finished-at="2024-03-04T11:25:00 YEKT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDisplayInventory -->
+        <test-method signature="testSellItem()[pri:0, instance:SellerTest@16aa0a0a]" started-at="2024-03-04T11:25:00 YEKT" name="testSellItem" finished-at="2024-03-04T11:25:00 YEKT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSellItem -->

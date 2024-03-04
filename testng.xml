@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="MixedTests">
+    <test name="MixedTests">
+        <groups>
+            <run>
+                <include name="unit"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="WeaponInventoryTest"/>
+            <class name="SellerTest"/>
+        </classes>
+    </test>
+    <test name="PackageTests">
+        <packages>
+            <package name="com.example.tests"/>
+        </packages>
+    </test>
+</suite>
