@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="0.354" tests="10" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="0.376" tests="8" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="RU"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\Пётр\AppData\Local\Temp\surefire5730291011140814438\surefirebooter-20240304112459647_3.jar C:\Users\Пётр\AppData\Local\Temp\surefire5730291011140814438 2024-03-04T11-24-59_550-jvmRun1 surefire-20240304112459647_1tmp surefire_0-20240304112459647_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\Пётр\AppData\Local\Temp\surefire664611187604411482\surefirebooter6213246526561972163.jar C:\Users\Пётр\AppData\Local\Temp\surefire664611187604411482 2024-03-04T12-45-20_770-jvmRun1 surefire12517056810998124986tmp surefire_05428804272775672281tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Пётр\OneDrive\Рабочий стол\4 семестр\Информационка\Lab4\Unit-Testing\target\test-classes;C:\Users\Пётр\OneDrive\Рабочий стол\4 семестр\Информационка\Lab4\Unit-Testing\target\classes;C:\Users\Пётр\.m2\repository\org\testng\testng\7.7.0\testng-7.7.0.jar;C:\Users\Пётр\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\Пётр\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\Пётр\.m2\repository\org\webjars\jquery\3.6.1\jquery-3.6.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Пётр\AppData\Local\Temp\surefire5730291011140814438\surefirebooter-20240304112459647_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Пётр\AppData\Local\Temp\surefire664611187604411482\surefirebooter6213246526561972163.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.1+12-LTS-29"/>
@@ -58,19 +58,33 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testBuyItem" classname="BuyerTest" time="0.006">
-    <system-out><![CDATA[Оружие Пистолет куплено за 200.0.
-]]></system-out>
+  <testcase name="testInventory" classname="SellerTest" time="0.004">
     <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
 ]]></system-err>
   </testcase>
-  <testcase name="testBuyItemWithEnoughMoney" classname="BuyerTest" time="0.002">
+  <testcase name="testSellItem" classname="SellerTest" time="0.001">
+    <system-out><![CDATA[Оружие Пистолет продано за 200.0.
+]]></system-out>
+  </testcase>
+  <testcase name="testBuyItem" classname="BuyerTest" time="0.002">
     <system-out><![CDATA[Оружие Пистолет куплено за 200.0.
 ]]></system-out>
   </testcase>
-  <testcase name="testBuyItemWithoutEnoughMoney" classname="BuyerTest" time="0.0">
+  <testcase name="testBuyItemWithEnoughMoney[1000, 200, 800.0](1)" classname="BuyerTest" time="0.004">
+    <system-out><![CDATA[Оружие Пистолет куплено за 200.0.
+]]></system-out>
+  </testcase>
+  <testcase name="testBuyItemWithEnoughMoney[800, 200, 600.0](2)" classname="BuyerTest" time="0">
+    <system-out><![CDATA[Оружие Пистолет куплено за 200.0.
+]]></system-out>
+  </testcase>
+  <testcase name="testBuyItemWithEnoughMoney[400, 200, 200.0](3)" classname="BuyerTest" time="0.001">
+    <system-out><![CDATA[Оружие Пистолет куплено за 200.0.
+]]></system-out>
+  </testcase>
+  <testcase name="testBuyItemWithoutEnoughMoney" classname="BuyerTest" time="0">
     <system-out><![CDATA[У покупателя недостаточно денег для покупки.
 ]]></system-out>
   </testcase>
@@ -79,10 +93,4 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 У покупателя недостаточно денег для покупки.
 ]]></system-out>
   </testcase>
-  <testcase name="testDisplayInventory" classname="SellerTest" time="0.001"/>
-  <testcase name="testSellItem" classname="SellerTest" time="0.001"/>
-  <testcase name="testBuyerBuyItem" classname="WeaponInventoryTest" time="0.004"/>
-  <testcase name="testBuyerCannotSellItem" classname="WeaponInventoryTest" time="0.0"/>
-  <testcase name="testSellerCannotBuyItem" classname="WeaponInventoryTest" time="0.001"/>
-  <testcase name="testSellerSellItem" classname="WeaponInventoryTest" time="0.001"/>
 </testsuite>

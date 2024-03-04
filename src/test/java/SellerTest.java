@@ -24,7 +24,7 @@ public class SellerTest {
     }
 
    @Test(groups = {"unit"})
-    public void testDisplayInventory() {
+    public void testInventory() {
         final double EXPECTED_MONEY = 1000.0;
         // Arrange
         Seller seller = new Seller(1000);

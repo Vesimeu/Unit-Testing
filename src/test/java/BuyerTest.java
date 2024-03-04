@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-
+import org.testng.annotations.DataProvider;
 
 public class BuyerTest {
     private static final double DELTA = 1e-4;
@@ -63,13 +63,21 @@ public class BuyerTest {
         Assert.assertTrue(actualOutput.contains(expectedOutput2));
 
     }
+//create dataprovider 
+    @DataProvider(name = "buyItemData")
+    public Object[][] buyItemData() {
+        return new Object[][] {
+            {1000, 200, 800.0},  // Первый элемент: сумма денег покупателя, второй элемент: цена пистолета, третий элемент: ожидаемая сумма денег покупателя после покупки
+            {800, 200, 600.0},   // Пример других данных
+            {400, 200, 200.0}
+        };
+    }
 
-    @Test(groups = {"unit"})    
-    public void testBuyItemWithEnoughMoney() {
+    @Test(groups = {"unit"}, dataProvider = "buyItemData")
+    public void testBuyItemWithEnoughMoney(double initialMoney, double itemPrice, double expectedMoneyAfterPurchase) {
         // Arrange
-        final double EXPECTED_MONEY = 800.0;
-        Buyer buyer = new Buyer(1000);
-        Weapon pistol = new Weapon("Пистолет", 200);
+        Buyer buyer = new Buyer(initialMoney);
+        Weapon pistol = new Weapon("Пистолет", itemPrice);
 
         // Act
         buyer.buyItem(pistol, pistol.getPrice());
@@ -77,7 +85,7 @@ public class BuyerTest {
         // Assert
         List<Weapon> inventory = buyer.getInventory();
         Assert.assertTrue(inventory.contains(pistol));
-        Assert.assertEquals(buyer.getMoney(), EXPECTED_MONEY , DELTA);
+        Assert.assertEquals(buyer.getMoney(), expectedMoneyAfterPurchase, 0.001);
     }
 
     @Test(groups = {"unit"})

@@ -9,6 +9,7 @@
         <classes>
             <class name="WeaponInventoryTest"/>
             <class name="SellerTest"/>
+            <class name="BuyerTest"/>
         </classes>
     </test>
     <test name="PackageTests">
